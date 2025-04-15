@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  [type='text'],
+  [type='email'],
+  [type='url'],
+  [type='password'],
+  [type='number'],
+  [type='date'],
+  [type='datetime-local'],
+  [type='month'],
+  [type='search'],
+  [type='tel'],
+  [type='time'],
+  [type='week'],
+  [multiple],
+  textarea,
+  select {
+    @apply form-input border-gray-700 bg-[#1E1E1E] text-white focus:border-[#01c2f3] focus:ring-[#01c2f3] rounded-md shadow-sm;
+  }
+}
+
+/* Auth Animation Classes */
+.auth-fade-in {
+  opacity: 0;
+  animation: fadeIn 400ms ease-in-out forwards;
+}
+
+.auth-slide-up {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideUp 400ms ease-in-out forwards;
+}
+
+.auth-delay {
+  animation-delay: 300ms;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Profile Overlay */
+.profile-overlay {
+  transition: all 0.3s ease-in-out;
+}
+
+/* Button Styles */
+.btn-signin {
+  background-color: #1D458C !important;
+  color: #FECF0C !important;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-signin:hover {
+  background-color: #15336A !important;
+}
+
+.btn-signup {
+  background-color: #FECF0C !important;
+  color: #1E1E1E !important;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.btn-signup:hover {
+  background-color: #E5BB0B !important;
+}
